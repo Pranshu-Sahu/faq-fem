@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pt-36 pb-20 md:pl-8 md:py-0">
+  <main>
+    <div class="bg-white  max-w-sm rounded-lg  pb-12 px-6 md:max-w-4xl md:pt-14 md:px-0  hero-container">
+      <!-- left side -->
+      <div class="img-container md:h-auto md:relative">
+        <!-- mobile images -->
+        <img src="images/illustration-woman-online-mobile.svg" class=" illustration-img md:hidden" alt="illustration image of woman">
+        <img src="images/bg-pattern-mobile.svg" role="presentation" class="pattern-image md:hidden">
+        <!-- desktop images -->
+        <img src="images/illustration-woman-online-desktop.svg" class="absolute z-20 -left-8 hidden md:block" alt="illustration image">
+        <img src="images/illustration-box-desktop.svg" class="absolute z-30 top-32 -left-24 hidden md:block" alt="illustration box image">
+        <img src="images/bg-pattern-desktop.svg" role="presentation" class="absolute z-10 bottom-6 right-6 hidden md:block">
+      </div>
+      <!-- right side -->
+      <div>
+        <h1 class="text-center font-bold md:text-left md:text-2xl md:mb-12">FAQ</h1>
+        <div class="accordion-container text-gray-600 md:mr-16 md:max-w-xs">
+          <!-- accordion item 1 -->
+          <div class="accordion-item ">
+            <!-- header -->
+            <h2 class="">
+              <button id="accordion-header-1" data-accordion-header aria-expanded="false" aria-controls="accordion-panel-1"
+                class="w-full accordion-header justify-items-start items-center">
+                How many team members can I invite?
+                <svg aria-hidden="true" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </h2>
+            <!-- panel -->
+            <div class="panel pr-4" aria-hidden="true" id="accordion-panel-1"  aria-labelledby="accordion-header-1">
+              <p> You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+          </div>
+          <hr class="h-0.5 divider">
+          <!-- accordion item 2 -->
+          <div class="accordion-item ">
+            <!-- header -->
+            <h2 class="">
+              <button id="accordion-header-2" data-accordion-header aria-expanded="true" aria-controls="accordion-panel-2"
+                class="w-full accordion-header justify-items-start items-center">
+                What is the maximum file upload size?
+                <svg aria-hidden="true" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </h2>
+            <!-- panel -->
+            <div class="panel pr-4" aria-hidden="false" id="accordion-panel-2" aria-labelledby="accordion-header-2">
+              <p> No more than 2GB. All files in your account must fit your allotted storage space.
+              </p>
+            </div>
+          </div>
+          <hr class="h-0.5 divider">
+          <!-- accordion item 3 -->
+          <div class="accordion-item ">
+            <!-- header -->
+            <h2 class="">
+              <button id="accordion-header-3" data-accordion-header aria-expanded="false" aria-controls="accordion-panel-3"
+                class="w-full accordion-header justify-items-start items-center">
+                How do I reset my password?
+                <svg aria-hidden="true" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </h2>
+            <!-- panel -->
+            <div class="panel pr-4" aria-hidden="true" id="accordion-panel-3" aria-labelledby="accordion-header-3">
+              <p> Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.
+              </p>
+            </div>
+          </div>
+          <hr class="h-0.5 divider">
+          <!-- accordion item 4 -->
+          <div class="accordion-item ">
+            <!-- header -->
+            <h2 class="">
+              <button id="accordion-header-4" data-accordion-header aria-expanded="false" aria-controls="accordion-panel-4"
+                class="w-full accordion-header justify-items-start items-center">
+                Can I cancel my subscription?
+                <svg aria-hidden="true" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </h2>
+            <!-- panel -->
+            <div class="panel pr-4" aria-hidden="true" id="accordion-panel-4" aria-labelledby="accordion-header-4">
+              <p> Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </div>
+          </div>
+          <hr class="h-0.5 divider">
+          <!-- accordion item 5 -->
+          <div class="accordion-item ">
+            <!-- header -->
+            <h2 class="">
+              <button id="accordion-header-5" data-accordion-header aria-expanded="false" aria-controls="accordion-panel-5"
+                class="w-full accordion-header justify-items-start items-center">
+                Do you provide additional support?
+                <svg aria-hidden="true" width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </h2>
+            <div class="panel pr-4" aria-hidden="true" id="accordion-panel-5" aria-labelledby="accordion-header-5">
+              <p> Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </p>
+            </div>
+          </div>
+          <hr class="h-0.5 divider">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-lg w-max text-gray-800 bg-blue-100 px-4 my-4">Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" class="font-bold" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#" class="font-bold">Pranshu Sahu</a>.</footer>
+
+  <script src="accordion.js"></script>
+</body>
+
+</html>
